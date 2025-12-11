@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#leaderboard-container {
+    width: 200px;
+    background-color: #c0c0c0;
+    padding: 10px 20px;
+    border: 3px solid;
+    border-color: #7b7b7b #fff #fff #7b7b7b;
+}
+
+#leaderboard-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+#leaderboard {
+    padding-left: 20px;
+    margin: 0;
+}
+
+#leaderboard li {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    margin-bottom: 20px;
+    background-color: #c0c0c0;
+    padding: 10px;
+    border: 3px solid;
+    border-color: #7b7b7b #fff #fff #7b7b7b;
+}
+
+.info-item {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+}
+
+#reset-button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid;
+    border-color: #fff #808080 #808080 #fff;
+    background-color: #c0c0c0;
+    cursor: pointer;
+}
+
+#reset-button:active {
+    border-color: #808080 #fff #fff #808080;
+}
+
+
+#game-board {
+    display: grid;
+    border: 3px solid;
+    border-color: #7b7b7b #fff #fff #7b7b7b;
+    background-color: #c0c0c0;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 2px solid;
+    border-color: #fff #808080 #808080 #fff;
+    background-color: #c0c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell.revealed {
+    border: 1px solid #7b7b7b;
+    background-color: #bdbdbd;
+}
+
+.cell.mine {
+    background-color: #ff0000;
+}
+
+.cell .mine-icon {
+    font-size: 20px;
+}
+
+.cell .flag-icon {
+    font-size: 20px;
+    color: red;
+}
+
+/* Number Colors */
+.cell[data-adjacent-mines="1"] { color: #0000ff; }
+.cell[data-adjacent-mines="2"] { color: #008200; }
+.cell[data-adjacent-mines="3"] { color: #ff0000; }
+.cell[data-adjacent-mines="4"] { color: #000084; }
+.cell[data-adjacent-mines="5"] { color: #840000; }
+.cell[data-adjacent-mines="6"] { color: #008284; }
+.cell[data-adjacent-mines="7"] { color: #840084; }
+.cell[data-adjacent-mines="8"] { color: #757575; }
